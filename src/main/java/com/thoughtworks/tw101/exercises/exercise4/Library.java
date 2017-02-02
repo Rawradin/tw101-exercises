@@ -12,5 +12,13 @@ public class Library {
     }
 
     public void printBooksContaining(String partialBookTitle) {
+        String str = "Books with \"" + partialBookTitle + "\" were:\n\n";
+
+        for (String book: books) {
+            if(book.toLowerCase().contains( partialBookTitle.toLowerCase() ))
+                str += book + "\n";
+        }
+
+        System.out.println(str);
     }
 }
