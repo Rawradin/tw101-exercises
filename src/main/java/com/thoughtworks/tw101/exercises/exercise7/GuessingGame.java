@@ -10,7 +10,7 @@ public class GuessingGame {
 
     public GuessingGame(int start, int end) {
         this.targetNumber = RandomNumber.between(start, end);
-        System.out.println("  | Guessing Game (" + this.targetNumber + ") |  \nEnter a number between " + start + " - " + end);
+        System.out.println("  | Guessing Game |  \nEnter a number between " + start + " - " + end);
     }
 
 

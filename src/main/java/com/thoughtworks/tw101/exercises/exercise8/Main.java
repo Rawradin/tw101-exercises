@@ -4,8 +4,17 @@ package com.thoughtworks.tw101.exercises.exercise8;
 // once they guess correctly. Use an ArrayList to store the guesses. Catch the NumberFormatException and handle the case
 // where the user entered a String that is not parseable.
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        GuessingGame game = new GuessingGame(1,100);
+        Scanner input = new Scanner(System.in);
+        Boolean won = false;
 
+        while(!won) {
+            won = game.guess(input);
+        }
+        game.printGuesses();
     }
 }
