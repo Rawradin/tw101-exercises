@@ -13,10 +13,20 @@ public class DiamondExercises {
 //             ***
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
+        int width = (2 * n) - 1;
 
+        for (int i = 0; i < n; i++) {
+            int emptySpaces = (width - (2 * i) - 1) / 2;
+            int stars  = width - (2 * emptySpaces);
+
+            printNTimes(emptySpaces, " ");
+            printNTimes(stars, "*");
+            printNTimes(emptySpaces, " ");
+            System.out.print("\n");
+        }
     }
 
-//    Diamond
+    //    Diamond
 //    Given a number n, print a centered diamond. Example for n=3:
 //              *
 //             ***
@@ -38,4 +48,11 @@ public class DiamondExercises {
     private static void drawADiamondWithYourName(int n) {
 
     }
+
+    private static void printNTimes(int n, String str) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(str);
+        }
+    }
 }
+
