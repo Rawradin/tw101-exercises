@@ -47,7 +47,15 @@ public class DiamondExercises {
 //            ***
 //             *
     private static void drawADiamondWithYourName(int n) {
+        int width = (2 * n) - 1;
 
+        for (int i = 0; i < n-1; i++) {
+            calcAndPrintLine(i, width);
+        }
+        System.out.println("Edgar");
+        for (int i = n-2; i >= 0; i--) {
+            calcAndPrintLine(i, width);
+        }
     }
 
     private static void printNTimes(int n, String str) {
