@@ -34,7 +34,26 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
+        int width = (2 * n) - 1;
 
+        for (int i = 0; i < n; i++) {
+            int emptySpaces = (width - (2 * i) - 1) / 2;
+            int stars  = width - (2 * emptySpaces);
+
+            printNTimes(emptySpaces, " ");
+            printNTimes(stars, "*");
+            printNTimes(emptySpaces, " ");
+            System.out.print("\n");
+        }
+        for (int i = n-1; i >= 0; i--) {
+            int emptySpaces = (width - (2 * i) - 1) / 2;
+            int stars  = width - (2 * emptySpaces);
+
+            printNTimes(emptySpaces, " ");
+            printNTimes(stars, "*");
+            printNTimes(emptySpaces, " ");
+            System.out.print("\n");
+        }
     }
 
 //    Diamond with Name
