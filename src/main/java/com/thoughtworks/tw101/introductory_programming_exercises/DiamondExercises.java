@@ -16,13 +16,7 @@ public class DiamondExercises {
         int width = (2 * n) - 1;
 
         for (int i = 0; i < n; i++) {
-            int emptySpaces = (width - (2 * i) - 1) / 2;
-            int stars  = width - (2 * emptySpaces);
-
-            printNTimes(emptySpaces, " ");
-            printNTimes(stars, "*");
-            printNTimes(emptySpaces, " ");
-            System.out.print("\n");
+            calcAndPrintLine(i, width);
         }
     }
 
@@ -37,26 +31,14 @@ public class DiamondExercises {
         int width = (2 * n) - 1;
 
         for (int i = 0; i < n; i++) {
-            int emptySpaces = (width - (2 * i) - 1) / 2;
-            int stars  = width - (2 * emptySpaces);
-
-            printNTimes(emptySpaces, " ");
-            printNTimes(stars, "*");
-            printNTimes(emptySpaces, " ");
-            System.out.print("\n");
+            calcAndPrintLine(i, width);
         }
-        for (int i = n-1; i >= 0; i--) {
-            int emptySpaces = (width - (2 * i) - 1) / 2;
-            int stars  = width - (2 * emptySpaces);
-
-            printNTimes(emptySpaces, " ");
-            printNTimes(stars, "*");
-            printNTimes(emptySpaces, " ");
-            System.out.print("\n");
+        for (int i = n-2; i >= 0; i--) {
+            calcAndPrintLine(i, width);
         }
     }
 
-//    Diamond with Name
+    //    Diamond with Name
 //    Given a number n, print a centered diamond with your name in place of the middle line. Example for n=3:
 //
 //             *
@@ -72,6 +54,16 @@ public class DiamondExercises {
         for (int i = 0; i < n; i++) {
             System.out.print(str);
         }
+    }
+
+    private static void calcAndPrintLine(int i, int width) {
+        int emptySpaces = (width - (2 * i) - 1) / 2;
+        int stars  = width - (2 * emptySpaces);
+
+        printNTimes(emptySpaces, " ");
+        printNTimes(stars, "*");
+        printNTimes(emptySpaces, " ");
+        System.out.print("\n");
     }
 }
 
