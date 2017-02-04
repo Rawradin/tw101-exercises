@@ -5,6 +5,7 @@ public class DiamondExercises {
         drawAnIsoscelesTriangle(3);
         drawADiamond(8);
         drawADiamondWithYourName(3);
+//        drawADiamond(100);
     }
 
 //    Isosceles Triangle
